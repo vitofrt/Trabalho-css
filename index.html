@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GameVerse - Sua Loja Gamer</title>
+
+  <!-- SEO / Google -->
+  <meta name="description" content="GameVerse — loja gamer com os melhores jogos, consoles e acessórios.">
+  <meta name="author" content="GameVerse">
+  <meta name="keywords" content="games, loja gamer, consoles, acessórios, promoções, GameVerse">
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GameVerse - Sua Loja Gamer">
+  <meta property="og:description" content="GameVerse — os melhores jogos, consoles e acessórios com preços imperdíveis.">
+  <meta property="og:image" content="./img/og-card.webp">
+
+  <!-- Fontes e estilos -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/estilo.css">
+  <link rel="icon" href="./img/favicon.ico">
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <h1>🎮 GameVerse</h1>
+      <nav aria-label="Menu principal">
+        <ul class="menu">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#jogos">Jogos</a></li>
+          <li><a href="#consoles">Consoles</a></li>
+          <li><a href="#ficha">Ficha & Oferta</a></li>
+          <li><a href="#painel-fotos">Painel de Fotos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Seção inicial com banner hero -->
+    <section id="inicio" aria-labelledby="inicio-title">
+      <h2 id="inicio-title">Bem-vindo à GameVerse</h2>
+
+      <div class="hero-banner">
+        <picture>
+          <source srcset="./img/banner-small.jpg" media="(max-width: 480px)" type="image/webp">
+          <source srcset="./img/banner-medium.jpg" media="(max-width: 899px)" type="image/webp">
+          <source srcset="./img/banner-large.jpg" media="(min-width: 900px)" type="image/webp">
+          <img src="./img/banner-large.jpg" alt="Banner com diversos jogos e consoles" loading="eager" decoding="async">
+        </picture>
+      </div>
+
+      <div class="conteudo-inicio">
+        <h3>O Universo dos Gamers</h3>
+        <p>Na <strong>GameVerse</strong> você encontra os melhores jogos, consoles e acessórios com preços imperdíveis!</p>
+      </div>
+    </section>
+
+    <!-- Seção de Jogos -->
+    <section id="jogos">
+      <h2>Jogos</h2>
+      <p>Confira os lançamentos e promoções mais recentes.</p>
+    </section>
+
+    <!-- Imagem Horizon -->
+    <section class="form-section" id="ficha">
+      <picture>
+        <source srcset="./img/horizon-small.webp" media="(max-width: 480px)" type="image/webp">
+        <source srcset="./img/horizon-medium.webp" media="(max-width: 899px)" type="image/webp">
+        <source srcset="./img/horizon-large.webp" media="(min-width: 900px)" type="image/webp">
+        <img src="./img/horizon-large.webp" alt="Imagem promocional do jogo Horizon" loading="lazy">
+      </picture>
+
+      <h2>Ficha de Pré-venda</h2>
+
+      <!-- Formulário -->
+      <form class="form-grid" action="#" method="post" novalidate>
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+          <div class="grid-fields">
+            <div>
+              <label for="nome">Nome completo</label>
+              <input id="nome" name="nome" type="text" placeholder="Seu nome completo" required>
+            </div>
+            <div>
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" placeholder="seu@exemplo.com" required>
+            </div>
+            <div>
+              <label for="telefone">Telefone</label>
+              <input id="telefone" name="telefone" type="tel" placeholder="+55 11 9xxxx-xxxx">
+            </div>
+            <div>
+              <label for="nascimento">Data de nascimento</label>
+              <input id="nascimento" name="nascimento" type="date">
+            </div>
+            <div>
+              <label for="quantidade">Quantidade</label>
+              <input id="quantidade" name="quantidade" type="number" min="1" max="10" value="1">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferências</legend>
+          <label><input type="checkbox" name="newsletter" checked> Desejo receber novidades</label>
+          <label for="plataforma">Plataforma</label>
+          <select id="plataforma" name="plataforma">
+            <option>PlayStation</option>
+            <option>Xbox</option>
+            <option>PC</option>
+            <option>Switch</option>
+          </select>
+          <label for="observacoes">Observações</label>
+          <textarea id="observacoes" name="observacoes" placeholder="Informações adicionais"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Comprovante</legend>
+          <label for="arquivo">Anexar arquivo (opcional)</label>
+          <input id="arquivo" name="arquivo" type="file" accept="image/*,.pdf">
+        </fieldset>
+
+        <div class="actions">
+          <button type="submit">Enviar pedido</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Painel de fotos -->
+    <section id="painel-fotos">
+      <h2>Painel de Fotos</h2>
+      <div class="painel">
+        <div class="foto foto1" aria-label="Elden Ring"></div>
+        <div class="foto foto2" aria-label="Spider-Man"></div>
+        <div class="foto foto3" aria-label="FIFA"></div>
+        <div class="foto foto4" aria-label="God of War"></div>
+        <div class="foto foto5" aria-label="MW3"></div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+      <h2>Contato</h2>
+      <p style="text-align: center;">Fale conosco pelo formulário acima ou através das nossas redes sociais.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="ano"></span> GameVerse — Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

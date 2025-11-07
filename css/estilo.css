@@ -1,0 +1,290 @@
+:root {
+  --bg: #0f0f13;
+  --card: #121217;
+  --accent: #6be;
+  --accent-strong: #69b7ff;
+  --text: #e9eef8;
+  --muted: rgba(255, 255, 255, 0.6);
+  --maxw: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #07111a 0%, #071219 100%);
+}
+
+/* Header / Menu */
+header {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(5px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu a {
+  color: var(--text);
+  text-decoration: none;
+  padding: .5rem .7rem;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a:focus {
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
+}
+
+/* Estrutura principal */
+main {
+  max-width: var(--maxw);
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin: 2rem 0;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Hero Image (banner principal) */
+.hero-banner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 21 / 9; /* mantém proporção panorâmica */
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* preenche sem distorcer */
+  display: block;
+}
+
+/* Imagem da seção de pré-venda (Horizon) */
+.form-section picture img {
+  width: 100%;
+  max-width: 900px;
+  height: auto; /* mantém proporção */
+  border-radius: 12px;
+  display: block;
+  margin: 1rem auto;
+  object-fit: contain; /* evita esticar */
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 900px) {
+  .form-section picture img {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+
+/* Ficha de pré-venda */
+.form-section h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Form + Figure */
+.sessao-form-fig {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  .sessao-form-fig {
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+  }
+}
+
+.form-grid {
+  display: grid;
+  gap: 1rem;
+} 
+
+fieldset {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.grid-fields {
+  display: grid;
+  gap: .7rem;
+}
+
+@media (min-width: 520px) {
+  .grid-fields {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: .3rem;
+  color: var(--muted);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: .6rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--accent-strong);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button {
+  background: var(--accent-strong);
+  color: #012;
+  border: none;
+  border-radius: 8px;
+  padding: .6rem 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Painel de Fotos */
+.painel {
+  display: grid;
+  gap: 6px;
+}
+
+.painel .foto {
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: 0.3s;
+}
+
+.painel .foto:hover {
+  transform: scale(1.02);
+}
+
+/* Telas grandes: ocupa 70% da altura da tela */
+@media (min-width: 900px) {
+  .painel {
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(80px, 1fr);
+    height: 70vh;
+  }
+
+  .foto1 {
+    grid-column: 1 / 7;
+    grid-row: 1 / 3;
+    background-image: url('/Trabalho-css-main/Trabalho-css-main/img/elden.jpg');
+  }
+
+  .foto2 {
+    grid-column: 7 / 10;
+    grid-row: 1 / 2;
+    background-image: url('/Trabalho-css-main/Trabalho-css-main/img/spider.jpg');
+  }
+
+  .foto3 {
+    grid-column: 10 / 13;
+    grid-row: 1 / 2;
+    background-image: url('/Trabalho-css-main/Trabalho-css-main/img/fifa.jpg');
+  }
+
+  .foto4 {
+    grid-column: 7 / 10;
+    grid-row: 2 / 3;
+    background-image: url('/Trabalho-css-main/Trabalho-css-main/img/god.jpg');
+  }
+
+  .foto5 {
+    grid-column: 10 / 13;
+    grid-row: 2 / 3;
+    background-image: url('/Trabalho-css-main/Trabalho-css-main/img/mw3.jpg');
+  }
+}
+
+/* Telas pequenas: redistribui sem overflow */
+@media (max-width: 899px) {
+  .painel {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 160px;
+  }
+
+  .foto1 {
+    background-image: url('./img/foto-elden.webp');
+  }
+
+  .foto2 {
+    background-image: url('./img/foto-spider.webp');
+  }
+
+  .foto3 {
+    background-image: url('./img/foto-fifa.webp');
+  }
+
+  .foto4 {
+    background-image: url('./img/foto-god.webp');
+  }
+
+  .foto5 {
+    background-image: url('./img/foto-mw3.webp');
+  }
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: .9rem;
+}
